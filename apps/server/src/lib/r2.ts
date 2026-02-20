@@ -25,6 +25,7 @@ const S3_CONFIG = {
 const r2Client = new S3Client({
   region: "auto",
   endpoint: S3_CONFIG.ENDPOINT,
+  forcePathStyle: true, // Required for self-hosted S3 (MinIO)
   credentials: {
     accessKeyId: S3_CONFIG.ACCESS_KEY_ID,
     secretAccessKey: S3_CONFIG.SECRET_ACCESS_KEY,
